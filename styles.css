@@ -1,7 +1,23 @@
-#container {
+/* #container {
     text-align: center;
 }
 
 #canvas {
     background-color: saddlebrown;
+}  */
+
+#container{
+    text-align: center;
+    width: 100%
+}
+
+#canvas {
+    background-color: saddlebrown;
+}
+
+button {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
 }
