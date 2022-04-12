@@ -36,13 +36,37 @@ $(function($){
             let score = 0;
             let game;
 
-            game = setInterval(gameLoop, settings.game_speed);
+            playButton();
+            
+
+            function playButton(){
+                let startButton = document.createElement("button");
+                startButton.innerHTML = "Play Snake";
+
+                let container = document.getElementById("container");
+                container.appendChild(startButton);
+
+                startButton.addEventListener ("click", function() {
+                    startButton.hidden = true;
+                    game = setInterval(gameLoop, settings.game_speed);
+                });
+            }
+            
 
             function gameLoop(){
                 clearBoard();
                 drawFood();
                 moveSnake();
                 drawSnake();
+            }
+
+            function resetGame(){
+                snake = [
+                    { x:50, y:100, lastX: 0, lastY: 0}
+                ];
+                food = { x: 200, y:200, eaten: false};
+                keyPressed = down;
+                score = 0;
             }
 
             function clearBoard(){
@@ -159,7 +183,17 @@ $(function($){
 
             function gameOver(){
                 clearInterval(game);
-                alert("GAME OVER!");
+                resetGame();
+                let gameOver = document.createElement("button");
+                gameOver.innerHTML = "Game over!";
+
+                let container = document.getElementById("container");
+                container.appendChild(gameOver);
+
+                gameOver.addEventListener ("click", function() {
+                    gameOver.hidden = true;
+                    playButton();
+                });
             }
         })
     }
