@@ -1,9 +1,11 @@
+```html
    _   ____                         __             _            ___                     
   (_) /___ \_   _  ___ _ __ _   _  / _\_ __   __ _| | _____    / _ \__ _ _ __ ___   ___ 
   | |//  / / | | |/ _ \ '__| | | | \ \| '_ \ / _` | |/ / _ \  / /_\/ _` | '_ ` _ \ / _ \
   | / \_/ /| |_| |  __/ |  | |_| | _\ \ | | | (_| |   <  __/ / /_\\ (_| | | | | | |  __/
  _/ \___,_\ \__,_|\___|_|   \__, | \__/_| |_|\__,_|_|\_\___| \____/\__,_|_| |_| |_|\___|
 |__/                        |___/                                                       
+```
 
 # jQuery.snake-game
 
@@ -59,7 +61,7 @@ You will access this plugin from your main JavaScript file, for example:
 
 ## CSS Styles
 
-These are the CSS styles that we will be using:
+These are the **CSS** styles that we will be using:
 
 ```css
 #container{
@@ -106,12 +108,12 @@ Try not to run into the wall or your own body, this is the challenge.
 
 The more food you eat, the higher your score will be!
 
-# Controls
+## Controls
 
-**Move up** - ARROW UP
-**Move down** - ARROW DOWN
-**Move left** - ARROW LEFT
-**Move right** - ARROW RIGHT
+* **Move up** - ARROW UP
+* **Move down** - ARROW DOWN
+* **Move left** - ARROW LEFT
+* **Move right** - ARROW RIGHT
 
 ## Options
 
