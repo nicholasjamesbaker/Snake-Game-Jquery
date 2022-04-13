@@ -67,6 +67,7 @@ $(function($){
                 food = { x: 200, y:200, eaten: false};
                 keyPressed = down;
                 score = 0;
+                $('#score').text(score);
             }
 
             function clearBoard(){
@@ -183,7 +184,6 @@ $(function($){
 
             function gameOver(){
                 clearInterval(game);
-                resetGame();
                 let gameOver = document.createElement("button");
                 gameOver.innerHTML = "Game over!";
 
@@ -192,6 +192,7 @@ $(function($){
 
                 gameOver.addEventListener ("click", function() {
                     gameOver.hidden = true;
+                    resetGame();
                     playButton();
                 });
             }
